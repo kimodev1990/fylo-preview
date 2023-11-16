@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url(./images/bg-mobile.png);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 375px;
+    min-width: 100px;
+    gap: clamp(10px, 5vw, 20px);
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: hsl(228, 56%, 26%);
+    width: clamp(100px, 80vw, 285px);
+    padding: clamp(15px, 5vw, 30px) clamp(40px, 5vw, 80px) clamp(15px, 5vw, 30px) clamp(15px, 5vw, 30px);
+    border-radius: 10px 100px 10px 10px;
+}
+
+.title-logo {
+    width: clamp(50px, 37vw, 135px);
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.icons {
+    display: flex;
+    gap: clamp(5px, 7vw, 20px);
+}
+
+.bg-logo>img {
+    width: clamp(12px, 7vw, 24px);
+}
+
+.bg-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(229, 57%, 11%);
+    width: clamp(5px, 10vw, 45px);
+    height: clamp(5px, 12vw, 45px);
+    border-radius: 10px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(100px, 80vw, 285px);
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px;
+    position: relative;
+    color: white;
+}
+
+.right h5 {
+    font-size: clamp(0.2rem, 3.5vw, 1rem);
+}
+
+.bar {
+    display: flex;
+    flex-direction: column;
+}
+
+.loading-bar {
+    background-color: hsl(229, 57%, 11%);
+    height: 15px;
+    border-radius: 10px;
+    width: clamp(80px, 70vw, 250px);
+}
+
+.loading-bar-color {
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    height: 12px;
+    width: 75%;
+    position: relative;
+    bottom: 13.9px;
+    border-radius: 10px;
+}
+
+.giga {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: clamp(80px, 70vw, 250px);
+}
+
+.giga h5 {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.notification {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(243, 100%, 93%);
+    border-radius: 10px;
+    width: clamp(50px, 50vw, 150px);
+    height: clamp(20px, 18vw, 60px);
+    color: black;
+}
+
+.notification>h1 {
+    margin: 0;
+    font-size: clamp(0.2rem, 9vw, 2rem);
+}
+
+.notification>h5 {
+    margin: 5px 0 0 0;
+}
+
+@media (min-width: 376px) {
+    body {
+        background-image: url(./images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
+        background-position: bottom;
+        min-height: 100vh;
+    }
+
+    .container {
+        flex-direction: row;
+        min-width: 376px;
+        max-width: fit-content;
+        align-items: end;
+    }
+
+    .left {
+        width: 350px;
+        height: 200px;
+        border-radius: 10px 100px 10px 10px;
+        padding: 0px 0px 0px clamp(20px, 5vw, 40px);
+    }
+
+    .title-logo {
+        width: clamp(50px, 22vw, 135px);
+    }
+
+    .icons {
+        gap: clamp(5px, 3vw, 20px);
+    }
+
+    .bg-logo {
+        width: clamp(20px, 6vw, 45px);
+        height: clamp(5px, 6vh, 45px);
+    }
+
+    .bg-logo>img {
+        width: clamp(12px, 4vw, 24px);
+    }
+
+    .right {
+        width: 550px;
+        height: 150px;
+        justify-content: center;
+        align-items: normal;
+        padding: 0 40px;
+    }
+
+    .right h5 {
+        margin-bottom: 10px;
+        margin-top: 0;
+        font-size: clamp(0.2rem, 2vw, 1rem);
+    }
+
+    .bar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .loading-bar {
+        width: auto;
+    }
+
+    .loading-bar-color {
+        bottom: 50%;
+    }
+
+    .giga {
+        width: auto;
+    }
+
+    .giga h5 {
+        margin-bottom: 0px;
+    }
+
+    .notification {
+        width: clamp(75px, 20vw, 150px);
+        height: clamp(30px, 10vw, 60px);
+        right: 45px;
+        bottom: 130px;
+        position: absolute;
+    }
+
+    .notification>h1 {
+        margin: 0;
+        font-size: clamp(0.2rem, 4vw, 2rem);
+    }
+
+    .notification>h5 {
+        margin: 5px 0 0 0;
+    }
+}
