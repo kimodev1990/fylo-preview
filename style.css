@@ -10,6 +10,8 @@ body {
     background-color: hsl(229, 57%, 11%);
     background-image: url(./images/bg-mobile.png);
     min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .container {
@@ -130,7 +132,6 @@ body {
 @media (min-width: 376px) {
     body {
         background-image: url(./images/bg-desktop.png);
-        background-repeat: no-repeat;
         background-size: 100% 50%;
         background-position: bottom;
     }
